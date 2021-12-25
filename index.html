@@ -38,15 +38,48 @@
           color: white;
           transition: 0.5s;
         }
+
+        .modal{
+          background-color: white;
+          border-radius: 0.5rem;
+          padding: 10px;
+          display: none;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-direction: column;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
         </style>
 </head>
 <body>
   <div class="container">
    <img src="image-edit.png" class="responsive">
-   <button>
-     Click here to view.
+   <button id="btn">
+     Click here to read more.
    </button>
    </div>
+
+   <div class="modal" id="modal">
+     <h3>Not currently available.</h3>
+     <h4 id="ok" style="color: blue; cursor: pointer;">OK</h4>
+   </div>
+
+
+   <script>
+     btn = document.getElementById("btn");
+     modal = document.getElementById("modal");
+     ok = document.getElementById("ok");
+
+     btn.onclick = function() {
+    modal.style.display = "flex";
+}
+ok.onclick = function() {
+    modal.style.display = "none";
+}
+   </script>
 
 </body>
 </html>
