@@ -10,15 +10,43 @@
         margin: 0;
         padding: 0;box-sizing: border-box;
       }
+      .container{
+        position: relative;
+      }
         .responsive {
          width: 100%;
          max-width: 100vw;
          max-height: 100%;
           height: auto;
         }
+        button{
+          position: absolute;
+          border: none;
+          border-radius: 0.5rem;
+          padding: 20px 70px;
+          bottom: 7%;
+          right: 20%;
+          background-color: #F6FFA5;
+          font-size: 20px;
+          font-weight: 600;
+          border: 2px solid #F6FFA5;
+          transition: 0.5s;
+        }
+        button:hover{
+          border: 2px solid #F6FFA5;
+          background-color: #1A2E72;
+          color: white;
+          transition: 0.5s;
+        }
         </style>
 </head>
 <body>
-   <img src="img.jpeg" class="responsive">
+  <div class="container">
+   <img src="image-edit.png" class="responsive">
+   <button>
+     Click here to view.
+   </button>
+   </div>
+
 </body>
 </html>
